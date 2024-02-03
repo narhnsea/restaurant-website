@@ -1,0 +1,27 @@
+/* Base Styles */
+/* ------------ */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Typography */
+/* ---------- */
+.restaurant-name {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+}
+
+/* Section Styling */
+/* --------------- */
+#about {
+  padding: 40px 0;
+  background-color: #f8f9fa; 
+  color: #d9534f; 
+}
