@@ -30,8 +30,9 @@ Le Jardin Gourmand is a modern, responsive website designed for a fictional high
 
 ## Screenshot
 
-![Le Jardin Gourmand Screenshot](images/screenshot.png)
+![Le Jardin Gourmand Screenshot](images/restaurant-website-homepage.png)
 
+![Le Jardin Gourmand Screenshot](images/about-page.png)
 
 ## Contact
 For support or business inquiries, reach out to me at nancyuki@yahoo.com.
