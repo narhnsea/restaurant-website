@@ -14,14 +14,354 @@ html {
   font-size: 3em;
   font-weight: bold;
   margin-bottom: 0.5em;
-  text-transform: uppercase; 
-  letter-spacing: 2px; 
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 2px; /* More spacing between letters */
 }
 
 /* Section Styling */
 /* --------------- */
 #about {
   padding: 40px 0;
-  background-color: #f8f9fa; 
-  color: #d9534f; 
+  background-color: #f8f9fa; /* A light grey that will complement the darker header */
+  color: #d9534f; /* Adjust top and bottom padding as needed */
+}
+
+#about .container {
+  max-width: 960px; /* Adjust the container width as needed */
+  padding-top: 0;
+}
+#about .container > *:first-child {
+  margin-top: 0; /* Removes top margin from the first element inside the container */
+}
+
+#about h2,
+#about h3 {
+  color: #2b2b2b; /* Adjust the color to fit the theme of your site */
+  margin-bottom: 20px;
+}
+
+#about p {
+  color: #343333; /* Adjust the color for paragraph text */
+  line-height: 1.6; /* Adjust line height for readability */
+}
+
+/* Carousel Styles */
+/* --------------- */
+#aboutCarousel {
+  margin-bottom: 20px; /* Space between carousel and text */
+}
+
+#aboutCarousel .carousel-item {
+  text-align: center; /* Center align the images if they are not wide enough */
+}
+
+#aboutCarousel .carousel-item img {
+  margin: 0 auto; /* Center the image horizontally */
+  max-height: 350px; /* Maximum height for images, adjust as necessary */
+  object-fit: cover; /* Cover the area of the carousel-item */
+}
+
+/* Carousel controls */
+#aboutCarousel .carousel-control-prev,
+#aboutCarousel .carousel-control-next {
+  width: 5%; /* Control width, adjust as needed */
+}
+
+#aboutCarousel .carousel-control-prev-icon,
+#aboutCarousel .carousel-control-next-icon {
+  background-size: 100%, 100%;
+}
+
+/* Indicators at the bottom of the carousel */
+#aboutCarousel .carousel-indicators li {
+  background-color: #333; /* Color of the indicators */
+  border-color: #333; /* Border color if needed */
+}
+
+#aboutCarousel .carousel-indicators .active {
+  background-color: #d9534f; /* Active indicator color to match the button */
+}
+
+.about-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.bg-dark {
+  background-color: #333; /* Dark background for contact info */
+}
+
+.text-light {
+  color: #333; /* Light text color */
+}
+.navbar.bg-white {
+  background-color: #333; /* Replace 'grey' with your desired shade of grey */
+}
+
+/* Menu Styles */
+/* ----------- */
+#menu {
+  background-color: #f8f9fa; /* A light grey background */
+}
+
+.menu-category {
+  margin-bottom: 30px; /* Spacing between categories */
+}
+
+.menu-item-card {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item-card:hover {
+  transform: translateY(-5px); /* Slight raise effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.menu-item-description {
+  font-size: 0.9em;
+  color: #515151; /* Grey text for the description */
+}
+
+.menu-item-price {
+  font-weight: bold;
+  color: #333; /* Darker text for price */
+}
+
+.menu-item-card {
+  margin-bottom: 20px; /* Spacing between menu items */
+  /* ... other styles ... */
+}
+
+.menu-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.carousel .carousel-item {
+  text-align: center;
+}
+
+.carousel .carousel-item img {
+  margin: 0 auto; /* Center the image */
+  max-height: 300px; /* Maximum height for images, adjust as necessary */
+  object-fit: cover; /* Ensure images cover the area properly */
+}
+
+.carousel-caption {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for legibility */
+  border-radius: 5px; /* Rounded corners for the caption */
+  padding: 10px; /* Padding inside the caption */
+}
+
+.carousel-caption h5 {
+  font-size: 1.1em;
+  color: #fff; /* White color for the title */
+  margin-bottom: 5px;
+}
+
+.carousel-caption p {
+  font-size: 0.9em;
+  color: #fff; /* White color for text */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); /* Makes the arrows white */
+}
+
+#mainCoursesCarousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding for legibility */
+}
+
+#mainCoursesCarousel .carousel-item img {
+  max-height: 200px; /* Consistent height for all images */
+  object-fit: cover; /* Ensure images cover the area properly */
+  margin: 0 auto; /* Center the image */
+}
+
+/* Button Styles */
+/* ------------- */
+.btn-primary {
+  background-color: #d9534f; /* Your brand's primary color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #c9302c; /* A darker shade for hover state */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f8f9fa; /* Light grey background */
+  color: #333; /* Dark grey text for better readability */
+}
+
+.menu-category {
+  margin-bottom: 2rem; /* Space between categories */
+}
+
+.menu-section-header {
+  font-size: 2rem; /* Large text for headers */
+  color: #333; /* Dark grey color */
+  margin-bottom: 1rem; /* Space below the header */
+}
+
+.menu-item {
+  padding: 0.5rem 0; /* Padding above and below each menu item */
+  border-bottom: 1px solid #ccc; /* Light grey border for separation */
+}
+
+.menu-item-title {
+  font-size: 1.5rem; /* Larger text for item titles */
+  font-weight: bold; /* Make the title bold */
+}
+
+.menu-item-description {
+  font-size: 1rem; /* Regular text size for description */
+  color: #666; /* Slightly lighter text color */
+  margin: 0.5rem 0; /* Space above and below the description */
+}
+
+.menu-item-price {
+  font-size: 1.25rem; /* Larger text size for price */
+  float: right; /* Align the price to the right */
+  font-weight: bold; /* Make the price bold */
+}
+
+/* Clearfix for floated elements */
+.menu-item::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.highlighted {
+  background-color: #f0ead6; /* Light brown background for highlighted items */
+  padding: 1rem; /* Padding around the highlighted items */
+  border-radius: 8px; /* Rounded corners for the highlight background */
+}
+
+/* Responsive Adjustments */
+/* ---------------------- */
+@media (max-width: 768px) {
+  .menu-item-price {
+    float: none;
+    display: block; /* Make price block level on small screens */
+    text-align: right; /* Align text right for the price */
+    margin-top: 0.5rem; /* Space above the price */
+  }
+}
+
+.text-center {
+  margin-bottom: 30px;
+}
+
+/* Ensure h2, h4, and h5 headings are styled appropriately */
+h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+h5 {
+  font-size: 1.25em;
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+/* Contact Information Styles */
+/* -------------------------- */
+.contact-info .container .row div {
+  display: flex;
+  align-items: center; /* Vertically center content */
+}
+
+.contact-info .container .col-md-4.text-center {
+  justify-content: center; /* Align content to the center for center column */
+}
+
+.contact-info {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  color: #333;
+  padding: 5px 0;
+  font-size: 0.9em;
+}
+
+.contact-item {
+  display: block; /* Display block to fill the width of the column */
+  margin: auto; /* Center the item when in 'text-center' column */
+}
+
+/* Overlay Content */
+/* --------------- */
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /* White text */
+}
+
+.reservation-button {
+  background-color: #d9534f; /* Bootstrap 'btn-danger' color */
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* More spacing between letters */
+  transition: background-color 0.3s ease;
+}
+
+.reservation-button:hover {
+  background-color: #c9302c; /* A darker shade on hover */
+}
+
+/* Footer Styles */
+/* ------------- */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
