@@ -28,6 +28,10 @@ Le Jardin Gourmand is a modern, responsive website designed for a fictional high
 - `js/script.js` - (If applicable) The main JavaScript file containing scripts for interactive features.
 - `images/` - Directory containing images, fonts, and other static assets.
 
+## Screenshot
+
+![Le Jardin Gourmand Screenshot](images/screenshot.png)
+
 
 ## Contact
 For support or business inquiries, reach out to me at nancyuki@yahoo.com.
