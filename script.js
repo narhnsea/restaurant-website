@@ -48,5 +48,22 @@ document.getElementById("carousel-next").addEventListener("click", () => {
   showCurrentImage();
 });
 
-// Call this function to display the first image when the script loads
-showCurrentImage();
+document.addEventListener("DOMContentLoaded", (event) => {
+  let currentImageIndex = 0;
+  const images = document.querySelectorAll(".reservation-images img");
+  const totalImages = images.length;
+
+  // Initially set the first image to be visible
+  images[currentImageIndex].classList.add("active");
+
+  setInterval(() => {
+    // Remove the 'active' class from the current image
+    images[currentImageIndex].classList.remove("active");
+
+    // Move to the next image index, looping back to 0 if at the end
+    currentImageIndex = (currentImageIndex + 1) % totalImages;
+
+    // Add the 'active' class to the next image
+    images[currentImageIndex].classList.add("active");
+  }, 3000); // Change image every 3 seconds
+});

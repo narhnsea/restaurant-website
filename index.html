@@ -75,9 +75,9 @@
 
         <div class="overlay-content text-center">
           <h1 class="restaurant-name">Le Jardin Gourmand</h1>
-          <button class="btn btn-danger btn-lg reservation-button">
+          <a href="#reservations" class="btn btn-danger btn-lg reservation-button" role="button">
             Reservation
-          </button>
+          </a>          
         </div>
       </div>
     </header>
@@ -449,47 +449,70 @@
         </div>
       </section>
 
-      <section id="reservations">
-        <section id="reservations" class="py-5">
-          <div class="container">
-            <h2 class="text-center">Reservations</h2>
-            <p class="text-center">
-              Reserve a table for a unique dining experience at Le Jardin
-              Gourmand.
-            </p>
-            <form>
-              <!-- Reservation form fields -->
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  placeholder="Enter your name"
-                />
-              </div>
-              <div class="form-group">
-                <label for="date">Date</label>
-                <input type="date" class="form-control" id="date" />
-              </div>
-              <div class="form-group">
-                <label for="time">Time</label>
-                <input type="time" class="form-control" id="time" />
-              </div>
-              <div class="form-group">
-                <label for="guests">Number of Guests</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="guests"
-                  placeholder="Enter number of guests"
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">Reserve Now</button>
-            </form>
-          </div>
-        </section>
-      </section>
+     <!-- Reservations Section -->
+
+     <section id="reservations" class="py-5">
+      <div class="text-center">
+        <h2>Reservations</h2>
+        <p>Reserve a table for a unique dining experience at Le Jardin Gourmand.</p>
+      </div>
+      <div class="reservation-container">
+    <!-- Reservation form fields -->
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name" 
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input
+          type="date"
+          class="form-control"
+          id="date"
+          name="date" 
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input
+          type="time"
+          class="form-control"
+          id="time"
+          name="time" 
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="guests">Number of Guests</label>
+        <input
+          type="number"
+          class="form-control"
+          id="guests"
+          name="guests" 
+          placeholder="Enter number of guests"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Reserve Now</button>
+    </form> 
+     </div>
+    <div class="reservation-images">
+      <img src="./media/food-pic-1.jpg" alt="Dining Experience" class="active">
+      <img src="./media/dessert-1.jpg" alt="Elegant Seating">
+      <img src="./media/main-course-1.jpg" alt="Restaurant Ambiance">
+      <!-- More Images -->
+    </div>
+  </div>
+</section>
+
       <section id="gallery">
         <section id="gallery" class="py-5 bg-light">
           <div class="container">
