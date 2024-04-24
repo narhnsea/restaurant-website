@@ -345,55 +345,37 @@ h5 {
 
 .reservation-container {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
 }
 
 .reservation-form {
-  flex: 1;
-  max-width: 50%; /* Limits the width of the form */
-  margin-right: 20px; /* Optional: Adds some space between the form and images */
-  margin-left: 60px;
+  width: 70%;
 }
 
 .reservation-images {
-  flex: 1;
-  max-width: 50%; /* Limits the width of the images */
+  width: 50%;
   position: relative;
-  overflow: hidden;
 }
 
 .reservation-images img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  border-radius: 15px;
-  transform: translateX(-50%);
   width: 50%;
+  position: absolute;
   opacity: 0;
-  transition: opacity 2s ease-in-out;
-  z-index: 1; /* Ensures the images are stacked on top of each other */
+  transition: opacity 0.5s ease;
+  border-radius: 15px; /* Optional: if you want rounded corners */
 }
 
 .reservation-images img.active {
   opacity: 1;
-  z-index: 2; /* Ensures the active image is visible over the others */
-}
-
-/* Ensures that the first image is displayed when the page loads */
-.reservation-images img:first-of-type {
-  opacity: 1;
   position: relative;
 }
-.text-center {
-  text-align: center;
-  margin-bottom: 30px; /* You can adjust the margin as needed */
-}
+
 /* Footer Styles */
-/* ------------- */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 5px 0; /* Adds padding to top and bottom for spacing */
 }

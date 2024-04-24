@@ -53,17 +53,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const images = document.querySelectorAll(".reservation-images img");
   const totalImages = images.length;
 
-  // Initially set the first image to be visible
-  images[currentImageIndex].classList.add("active");
-
-  setInterval(() => {
-    // Remove the 'active' class from the current image
+  function changeImage() {
     images[currentImageIndex].classList.remove("active");
-
-    // Move to the next image index, looping back to 0 if at the end
     currentImageIndex = (currentImageIndex + 1) % totalImages;
-
-    // Add the 'active' class to the next image
     images[currentImageIndex].classList.add("active");
-  }, 3000); // Change image every 3 seconds
+  }
+
+  // Set an interval for changing the image
+  setInterval(changeImage, 3000); // Change every 3 seconds
+
+  // Initially activate the first image
+  images[currentImageIndex].classList.add("active");
 });
