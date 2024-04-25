@@ -6,6 +6,8 @@ html {
   padding: 0;
   height: 100%;
   font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa; /* Light grey background */
+  color: #333; /* Dark grey text for better readability */
 }
 
 /* Typography */
@@ -225,12 +227,6 @@ html {
   background-color: #c9302c; /* A darker shade for hover state */
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-  background-color: #f8f9fa; /* Light grey background */
-  color: #333; /* Dark grey text for better readability */
-}
-
 .menu-category {
   margin-bottom: 2rem; /* Space between categories */
 }
@@ -343,33 +339,153 @@ h5 {
   color: #fff; /* White text */
 }
 
-.reservation-container {
+.container {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  text-align: center;
+  padding: 1em;
+  background-color: #f8f9fa;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.form-container,
+.image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
 }
 
-.reservation-form {
-  width: 70%;
+.form-container {
+  padding: 2em;
+  background-color: #fff; /* White background for the form */
+  border-radius: 8px; /* Rounded corners for the form container */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+  max-width: 600px; /* Maximum width of the form */
+  margin-right: 50px; /* Add space to the right of the form */
+  display: flex;
+  justify-content: left;
 }
 
-.reservation-images {
-  width: 50%;
+.form-control {
+  width: 100%; /* This will make the input stretch to the full width of its .form-group container */
+  padding: 10px; /* Adjust padding for better text visibility */
+  margin: 0; /* Resets any default margin */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-width: 500px; /* Or any other maximum width that suits your design */
+  display: block; /* Ensures that the input respects the max-width property */
+  margin-left: auto; /* These two margins allow the input to be centered within the .form-group */
+  margin-right: auto;
+}
+
+/* Style the input and button elements */
+.form-container input,
+.form-container button {
+  padding: 0.5em;
+  margin: 0.5em 0;
+  max-width: none;
+  border: 1px solid #ccc; /* A light grey border */
+  border-radius: 4px; /* Rounded corners for input fields and button */
+}
+.form-group {
+  width: 100%; /* ensures that form-group takes the full width of its container */
+  margin-bottom: 15px; /* space between each form-group */
+}
+
+.form-control {
+  width: calc(200% - 2em); /* adjust the width to account for padding */
+  padding: 10px; /* padding inside the input fields */
+  margin: 0; /* reset any default margin */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* If you want the .form-container to be a little wider than 500px */
+.form-container {
+  max-width: 600px; /* adjust as per your design */
+  margin: auto; /* center it within the .content container */
+  margin-right: 20px; /* adjust the margin to not push the form-container */
+}
+
+/* Style the button specifically */
+.form-container button {
+  background-color: #d9534f; /* A reddish background color */
+  color: white;
+  border: none; /* Remove the border for the button */
+  cursor: pointer; /* A pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Transition for the background color */
+}
+
+/* Change button background color slightly on hover */
+.form-container button:hover {
+  background-color: #e55347;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1em;
+    max-width: none; /* Allow the form to be full width on smaller screens */
+    flex-direction: column;
+  }
+}
+
+.image-container {
   position: relative;
+  width: 100%; /* Full width of the parent container */
+  height: 85vh; /* Adjusted to viewport height */
+  display: flex;
+  margin-left: 20px; /* Add space to the left of the image */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px; /* Rounded corners for the form container */
 }
 
-.reservation-images img {
-  width: 50%;
+.image-container img {
   position: absolute;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  border-radius: 15px; /* Optional: if you want rounded corners */
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjusted to fill the container */
+  height: 100%; /* Adjusted to fill the container */
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.reservation-images img.active {
-  opacity: 1;
-  position: relative;
+/* Individual styles for each image to create the stack effect */
+.image-container img:nth-child(1) {
+  z-index: 3; /* Highest z-index on top */
+  opacity: 1; /* Fully visible */
+}
+
+.image-container img:nth-child(2) {
+  z-index: 2;
+  opacity: 0.7; /* Partially visible for the fade effect */
+}
+
+.image-container img:nth-child(3) {
+  z-index: 1;
+  opacity: 0.5; /* More faded */
+}
+
+/* Add as many nth-child styles as you have images */
+/* ... */
+
+/* Responsive design adjustments, if necessary */
+@media (max-width: 768px) {
+  .image-container {
+    height: 300px; /* Set a fixed height for smaller screens */
+    order: -1;
+  }
 }
 
 /* Footer Styles */
